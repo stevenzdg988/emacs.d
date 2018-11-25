@@ -154,7 +154,9 @@
   (load (expand-file-name "~/.custom.el") t nil)
 
   ;; @see https://www.reddit.com/r/emacs/comments/4q4ixw/how_to_forbid_emacs_to_touch_configuration_files/
-  (load (expand-file-name "~/.emacs.d/custom-set-variables.el") t t))
+  ;; See `custom-file' for details.
+  (setq custom-file (expand-file-name "~/.emacs.d/custom-set-variables.el"))
+  (load custom-file t t))
 
 (setq gc-cons-threshold best-gc-cons-threshold)
 
